@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 160 30% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 10%;
+    --primary: 160 84% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 30% 95%;
+    --secondary-foreground: 160 30% 15%;
+    --muted: 150 20% 96%;
+    --muted-foreground: 160 10% 40%;
+    --accent: 150 50% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 160 84% 27%;
+    --radius: 0.625rem;
+    --chart-1: 160 84% 27%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 43 74% 66%;
+    --chart-4: 197 37% 40%;
+    --chart-5: 27 87% 67%;
+  }
+  .dark {
+    --background: 160 30% 6%;
+    --foreground: 150 20% 95%;
+    --card: 160 30% 8%;
+    --card-foreground: 150 20% 95%;
+    --popover: 160 30% 8%;
+    --popover-foreground: 150 20% 95%;
+    --primary: 160 70% 40%;
+    --primary-foreground: 160 30% 6%;
+    --secondary: 160 20% 15%;
+    --secondary-foreground: 150 20% 95%;
+    --muted: 160 20% 15%;
+    --muted-foreground: 150 15% 65%;
+    --accent: 150 45% 50%;
+    --accent-foreground: 160 30% 6%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 20% 18%;
+    --input: 160 20% 18%;
+    --ring: 160 70% 40%;
+    --chart-1: 160 70% 40%;
+    --chart-2: 173 58% 45%;
+    --chart-3: 43 74% 60%;
+    --chart-4: 197 37% 50%;
+    --chart-5: 27 87% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  .animate-pulse-slow {
+    animation: pulseSlow 3s ease-in-out infinite;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.7s ease-out forwards;
+  }
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+  .animate-fade-in-delay {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  .bg-grid-pattern {
+    background-image: radial-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
+}
