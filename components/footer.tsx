@@ -69,7 +69,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Household Waste Collection</li>
               <li>Commercial Waste Collection</li>
-              <li>Community Cleanup</li>
+              <li>Community CleanuP</li>
               <li>Construction Waste Removal</li>
               <li>Emergency Waste Collection</li>
             </ul>
