@@ -163,7 +163,7 @@ export default function AboutPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { name: 'Musa Musa Kabir', role: 'Founder & CEO', initials: 'MMK' },
-              { name: 'Abubakar Sadik yusuf', role: 'Operations Manager', initials: 'ASY' },
+              { name: 'Abubakar Shabbal', role: 'Operations Manager', initials: 'ASY' },
               { name: 'Yusuf Bello', role: 'Field Coordinator', initials: 'YB' },
               { name: 'Zainab Aliyu', role: 'Customer Relations', initials: 'ZA' },
             ].map((member, i) => (
